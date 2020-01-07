@@ -49,7 +49,7 @@
 (use-package rust-mode
   :ensure t
   :config
-;;  (setq rust-format-on-save t)
+  (setq rust-format-on-save t)
   (use-package cargo
     :ensure t
     :diminish cargo-minor-mode
@@ -67,6 +67,12 @@
 
 ;; proof-general
 (use-package proof-general
+  :ensure t)
+
+;; racket
+(use-package scribble-mode
+  :ensure t)
+(use-package racket-mode
   :ensure t)
 
 ;; show trailing whitespaces

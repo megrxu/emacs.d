@@ -8,8 +8,10 @@
 
 (setq-default indent-tabs-mode nil)
 
-(set-face-attribute 'default nil :height 140)
+(require 'autopair)
+(autopair-global-mode)
 
+(set-face-attribute 'default nil :height 140)
 (fset 'yes-or-no-p 'y-or-n-p)
 
 (delete-selection-mode t)
@@ -48,8 +50,7 @@
 ;;
 ;; default to DejaVu Sans Mono,
 (set-face-attribute 'default nil
-		    :family "DejaVu Sans Mono"
-		    :height 120
+		    :height 150
 		    :weight 'normal
 		    :width  'normal)
 

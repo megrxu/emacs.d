@@ -11,7 +11,9 @@
 
 (use-package doom-modeline
   :ensure t
-  :hook (after-init . doom-modeline-mode))
+  :hook (after-init . doom-modeline-mode)
+  :config
+  (setq doom-modeline-height 100))
 
 ;; ivy 依赖
 (use-package counsel

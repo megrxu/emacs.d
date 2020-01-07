@@ -17,6 +17,7 @@
 (setq debug-on-error t)
 
 (add-to-list 'load-path (expand-file-name "plugins" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "plugins/snippets" user-emacs-directory))
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 
 (use-package init-base)
@@ -26,6 +27,10 @@
 (use-package init-lsp)
 (use-package init-git)
 (use-package init-dev)
+
+;; set paren color
+(require 'parenface)
+(set-face-foreground 'paren-face "DimGray")
 
 (when (file-exists-p custom-file)
   (load custom-file))
