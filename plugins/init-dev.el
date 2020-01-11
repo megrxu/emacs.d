@@ -26,6 +26,9 @@
   (dolist (keyword '("WORKAROUND" "HACK" "TRICK"))
     (cl-pushnew `(,keyword . ,(face-foreground 'warning)) hl-todo-keyword-faces)))
 
+;; Wakatime
+(global-wakatime-mode)
+
 ;; C/C++
 ;; no indentation inside namespace
 (use-package cc-mode
