@@ -9,7 +9,7 @@
 (setq-default indent-tabs-mode nil)
 
 (require 'autopair)
-(autopair-global-mode)
+(autopair-global-mode t)
 
 (set-face-attribute 'default nil :height 140)
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -53,6 +53,7 @@
 		    :height 150
 		    :weight 'normal
 		    :width  'normal)
+(set-frame-font "monospace" nil t)
 
 ;; fix \:
 (set-fontset-font "fontset-default"
