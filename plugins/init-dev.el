@@ -27,6 +27,7 @@
     (cl-pushnew `(,keyword . ,(face-foreground 'warning)) hl-todo-keyword-faces)))
 
 ;; Wakatime
+(use-package wakatime-mode)
 (global-wakatime-mode)
 
 ;; C/C++
@@ -64,7 +65,7 @@
   (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
   (add-hook 'rust-mode-hook 'flycheck-mode))
 
-;; agda
+;; agda (install `agda` first)
 (load-file (let ((coding-system-for-read 'utf-8))
                 (shell-command-to-string "agda-mode locate")))
 
