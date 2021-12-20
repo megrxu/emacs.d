@@ -1,6 +1,7 @@
 # -*- mode: gitignore; -*-
 recentf
 custom.el
+opam-user-setup.el
 
 *~
 \#*\#

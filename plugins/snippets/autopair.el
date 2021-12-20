@@ -611,9 +611,9 @@ original command as if autopair didn't exist"
 (defun autopair--forward-sexp (arg)
   (forward-sexp arg)
   (cond ((cl-plusp arg)
-	 (skip-syntax-backward "'"))
-	(t
-	 (skip-syntax-forward "'"))))
+   (skip-syntax-backward "'"))
+  (t
+   (skip-syntax-forward "'"))))
 
 (defun autopair--find-pair (direction)
   "Compute (MATCHED START END) for the pair of the delimiter at point.

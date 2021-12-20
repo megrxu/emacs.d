@@ -21,10 +21,6 @@
 
 (defalias 'list-buffers 'ibuffer)
 
-(when (fboundp 'menu-bar-mode)
-  (menu-bar-mode -1))
-(when (fboundp 'tool-bar-mode)
-  (tool-bar-mode -1))
 (when (fboundp 'set-scroll-bar-mode)
   (set-scroll-bar-mode nil))
 
@@ -46,21 +42,6 @@
 ;; no corpse
 (substitute-key-definition 'kill-buffer 'kill-buffer-and-window global-map)
 
-;; Setting up Fonts for use with Agda/PLFA
-;;
-;; default to DejaVu Sans Mono,
-(set-face-attribute 'default nil
-		    :height 150
-		    :weight 'normal
-		    :width  'normal)
-(set-frame-font "monospace" nil t)
-
-;; fix \:
-(set-fontset-font "fontset-default"
-		  (cons (decode-char 'ucs #x2982)
-			(decode-char 'ucs #x2982))
-		  "STIX")
-
 ;; open recent files
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)
@@ -68,3 +49,5 @@
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
 (provide 'init-base)
+;;; init-base ends here
+
